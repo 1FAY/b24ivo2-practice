@@ -182,6 +182,8 @@ traefik.http.services.weighted.weighted.services[1].weight=10
 | Error rate | 0.05% | ≤ 0.1% | ✅ OK |
 | RPS | 95 req/s | - | ℹ️ Info |
 
+![SLO](screenshots/05_k6_results.png)
+
 ### Выводы и план улучшений
 
 1. **Кеширование**: Внедрить Redis кеширование для часто запрашиваемых данных
