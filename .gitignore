@@ -1,0 +1,52 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Docker
+.docker/
+volumes/
+
+# Логи
+logs/
+*.log
+web-logs.txt
+
+# Временные файлы
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Редакторы
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Build артефакты
+dist/
+build/
+*.tar
+*.zip
+
+# Тестирование (опционально)
+load/results.txt
+
+# Чувствительные данные
+.env
+.env.local
+secrets/
+*.pem
+*.key
+
+# Grafana (если хранятся динамические данные)
+grafana/data/
+
+# Prometheus (если хранятся метрики локально)
+prometheus/data/
+
+# Loki (если хранятся логи локально)
+loki/data/
