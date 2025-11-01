@@ -1,10 +1,15 @@
-FROM python:3.11-slim
-
+FROM node:18-alpine AS builder
 WORKDIR /app
-COPY app/requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY package*.json ./
+RUN npm install --omit=dev
 
-COPY app/ /app/
-ENV FLASK_APP=app.py FLASK_RUN_HOST=0.0.0.0 FLASK_RUN_PORT=5000
-EXPOSE 5000
-CMD ["flask", "run"]
+FROM node:18-alpine
+RUN addgroup -g 1001 appuser && adduser -D -u 1001 -G appuser appuser
+WORKDIR /app
+COPY --from=builder --chown=appuser:appuser /app/node_modules ./node_modules
+COPY --chown=appuser:appuser . .
+USER appuser
+EXPOSE 8080
+HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
+  CMD node -e "require('http').get('http://localhost:8080/health', (r) => process.exit(r.statusCode === 200 ? 0 : 1))"
+CMD ["node", "server.js"]
