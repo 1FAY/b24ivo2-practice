@@ -67,7 +67,6 @@ services:
       - "traefik.http.routers.web-canary.rule=Host(`localhost`)"
       - "traefik.http.routers.web-canary.entrypoints=web"
       - "traefik.http.services.web-canary.loadbalancer.server.port=8080"
-      # Вес сервиса для распределения трафика
       - "traefik.http.services.web-canary.loadbalancer.sticky=false"
 
   traefik:
