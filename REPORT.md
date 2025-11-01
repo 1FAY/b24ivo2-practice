@@ -1,8 +1,8 @@
 # Отчёт по практике DevOps №3
 
-- **ФИО**: [Ваше ФИО]
+- **ФИО**: Трефилов Егор Андреевич
 - **Группа**: Б-24 ИВО-2
-- **Репозиторий**: https://github.com/[username]/devops-practice-3
+- **Репозиторий**: https://github.com/coffee1337/devops-practice-3
 
 ---
 
