@@ -2,7 +2,7 @@
 
 - **ФИО**: Трефилов Егор Андреевич
 - **Группа**: Б-24 ИВО-2
-- **Репозиторий**: https://github.com/coffee1337/devops-practice-3
+- **Репозиторий**: [https://github.com/coffee1337/devops-practice-3](https://github.com/coffee1337/b24ivo2-practice/tree/devops-practice-v3)
 
 ---
 
